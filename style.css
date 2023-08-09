@@ -28,6 +28,10 @@ html{
     scroll-behavior: smooth;
 }
 
+#learnMe{
+    margin-right: 20px;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -218,7 +222,7 @@ section .title::after{
 .home .home-content a{
     display: inline-block;
     background: var(--accent);
-    color: var(--light);
+    color: var(--dark);
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -265,7 +269,7 @@ section .title::after{
 .about .about-content .right a{
     display: inline-block;
     background: var(--accent);
-    color: var(--light);
+    color: var(--dark);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -284,6 +288,9 @@ section .title::after{
     color:var(--light);
     background: var(--dark);
 }
+.services .card:hover{
+    color: var(--dark);
+}
 .services .title::before,
 .teams .title::before{
     background: var(--light);
@@ -295,7 +302,7 @@ section .title::after{
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: var(--mid);
+    background: var(--dark);
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -317,7 +324,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
-    color: var(--light);
+    color: var(--dark);
 }
 .services .serv-content .card .text{
     font-size: 25px;
@@ -347,7 +354,7 @@ section .title::after{
 .skills .skills-content .left a{
     display: inline-block;
     background: var(--accent);
-    color: var(--light);
+    color: var(--dark);
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
@@ -541,6 +548,9 @@ section .title::after{
 .contact .right form .textarea textarea{
   padding-top: 10px;
   resize: none;
+}
+#submitButton{
+    color: var(--dark);
 }
 .contact .right form .button-area{
   display: flex;

@@ -11,7 +11,7 @@
     --light-yell: #F9FBE7;
     --mid-yell: #F0EDD4;
     --dark-yell: #ECCDB4; */
-
+    --choice: dark;
     --accent: #EC625F;
     --dark: #313131;
     --mid: #414141;
@@ -30,6 +30,67 @@ html{
 
 #learnMe{
     margin-right: 20px;
+}
+
+/* dark mode slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--accent);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--dark);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--dark);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* custom scroll bar */

@@ -58,6 +58,10 @@ html{
     transition: .4s;
 }
 
+.slider.sticky{
+    background-color: var(--dark);
+}
+
 .slider:before {
     position: absolute;
     content: "";
@@ -71,11 +75,11 @@ html{
 }
 
 input:checked+.slider {
-    background-color: var(--dark);
+    background-color: var(--mid);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px var(--dark);
+    box-shadow: 0 0 1px var(--mid);
 }
 
 input:checked+.slider:before {
@@ -208,6 +212,9 @@ section .title::after{
 .navbar.sticky .menu li a:hover{
     color: var(--light);
 }
+.navbar.sticky .menu li a{
+    color: var(--dark);
+}
 
 /* menu btn styling */
 .menu-btn{
@@ -248,7 +255,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/background-wallpaper.jpg") no-repeat center;
+    /* background: url("images/background-wallpaper.jpg") no-repeat center; */
     /* background: var(--dark); */
     height: 100vh;
     color: var(--light);
@@ -256,6 +263,13 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+    /* background-image: url(images/background-wallpaper.jpg); */
+}
+.lightbackground{
+    background-color: var(--dark);
+}
+.darkbackground{
+    background-image: url(images/background-wallpaper.jpg);
 }
 .home .max-width{
   width: 100%;
@@ -311,7 +325,15 @@ section .title::after{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 25px;
+    filter: brightness(90%);
+    transition: .5s ease-in-out;
+    overflow: hidden;
+}
+.about .about-content .left img:hover{
+    filter: brightness(100%);
+    scale: 1.1;
+    transition: .3s ease-in-out;
 }
 .about .about-content .right{
     width: 55%;
@@ -352,6 +374,7 @@ section .title::after{
 .services .card:hover{
     color: var(--dark);
 }
+
 .services .title::before,
 .teams .title::before{
     background: var(--light);
@@ -369,9 +392,11 @@ section .title::after{
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 5px solid;
 }
 .services .serv-content .card:hover{
     background: var(--accent);
+    border: 5px solid;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -536,11 +561,12 @@ section .title::after{
 
 /* contact section styling */
 #contact{
-    background: var(--light);
+    background: var(--dark);
 }
 
 .contact .title::after{
     content: "get in touch";
+    background-color: var(--dark);
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -552,6 +578,7 @@ section .title::after{
 }
 .contact .contact-content .left p{
     text-align: justify;
+    color: var(--light);
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
@@ -572,10 +599,14 @@ section .title::after{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: var(--mid);
+    color: var(--light);
 }
 .contact .right form .fields{
     display: flex;
+}
+.contact .right form input,
+.contact .right form textarea{
+    background-color: var(--mid);
 }
 .contact .right form .field,
 .contact .right form .fields .field{
@@ -594,7 +625,7 @@ section .title::after{
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 1px solid lightgrey;
+    border: 2px solid var(--light);
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
@@ -604,7 +635,7 @@ section .title::after{
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
-    border-color: var(--light);
+    border-color: var(--mid);
 }
 .contact .right form .textarea textarea{
   padding-top: 10px;

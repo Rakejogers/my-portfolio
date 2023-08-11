@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     var r = document.querySelector(':root');
+    var darkmodeSwitch = document.getElementById("switch")
 
     function myFunction_get(variable) {
         // Get the styles (properties and values) for the root
@@ -14,27 +15,34 @@ $(document).ready(function(){
         r.style.setProperty(variable, set);
     }
 
-    $(".switch").on("mouseup", function () {
-        if (myFunction_get("--choice")=="dark") {
-            myFunction_set("--choice", "light");
-            myFunction_set("--accent", "#FEA1A1")
-            myFunction_set("--dark", "#ECCDB4")
-            myFunction_set("--mid", "#F0EDD4")
-            myFunction_set("--light", "#F9FBE7")
-        } else {
-            myFunction_set("--choice", "dark")
-            myFunction_set("--accent", "#EC625F")
-            myFunction_set("--dark", "#313131")
-            myFunction_set("--mid", "#414141")
-            myFunction_set("--light", "#7B7B7B")
-        }
-    });
+    darkmodeSwitch.addEventListener("click",
+        function () {
+            if (myFunction_get("--choice") == "dark") {
+                myFunction_set("--choice", "light");
+                myFunction_set("--accent", "#272829")
+                myFunction_set("--dark", "#FFF6E0")
+                myFunction_set("--mid", "#D8D9DA")
+                myFunction_set("--light", "#61677A")
+                document.getElementById("home").classList.remove("darkbackground")
+                document.getElementById("home").classList.add("lightbackground")
+            } else {
+                myFunction_set("--choice", "dark")
+                myFunction_set("--accent", "#EC625F")
+                myFunction_set("--dark", "#313131")
+                myFunction_set("--mid", "#414141")
+                myFunction_set("--light", "#7B7B7B")
+                document.getElementById("home").classList.add("darkbackground")
+                document.getElementById("home").classList.remove("lightbackground")
+            }
+        });
 
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
+            $('.slider').addClass("sticky");
         }else{
+            $('.slider').removeClass("sticky");
             $('.navbar').removeClass("sticky");
         }
         
@@ -53,7 +61,7 @@ $(document).ready(function(){
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function(){
+    $('.navbar .menu li a, .link').click(function(){
         // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });

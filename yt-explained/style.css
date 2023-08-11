@@ -1,0 +1,206 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #383838;
+    margin: 0;
+    padding: 0;
+}
+
+/* .container {
+    width: 400px;
+    margin: 0 auto;
+} */
+
+.container {
+    width: 100%;
+    /* Change width to 100% to fill the viewport */
+    max-width: 600px;
+    /* Add a max-width to avoid elements becoming too large on larger screens */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Add some horizontal padding to prevent elements from touching the edges */
+}
+
+.title {
+    font-size: 100px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.title span {
+    color: #EC625F;
+    font-size: 100px;
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    font-family: 'Comfortaa', sans-serif;
+    width: 600px;
+    height: 30px;
+    font-size: 16px;
+    color: gray;
+}
+
+/* when input field is hoverd make it have a shadow like buttom */
+.input-field:hover {
+    box-shadow: 0 0 10px #EC625F;
+    width: 620px;
+    transition: .2s ease-in;
+}
+
+/* when user clicks to type in input field make the box shadow stay */
+.input-field:focus {
+    box-shadow: 0 0 10px #EC625F;
+    width: 620px;
+    transition: .2s ease-in;
+}
+
+#explain-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+}
+
+.button {
+    background-color: #EC625F;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 15px;
+    font-family: 'Comfortaa', sans-serif;
+    box-shadow: 0 0 10px #EC625F;
+}
+
+.button:hover {
+    background-color: #EC625F;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 15px;
+    font-family: 'Comfortaa', sans-serif;
+    /* when the button is hoverd make a shadow appear */
+    box-shadow: 0 0 20px #EC625F;
+    width: 220px;
+    height: 50px;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+}
+
+progress {
+    width: 400px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 75px;
+    transform: translate(-50%, -50%);
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 15px;
+    background-color: #EC625F;
+    box-shadow: 0 0 20px #EC625F;
+}
+
+.explanation {
+    width: 1000px;
+    height: 350px;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #EC625F;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #EC625F;
+    background-color: #000000;
+    font-size: 16px;
+    display: none;
+}
+
+#home-button{
+    display: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 48px;
+        /* Reduce font size for smaller screens */
+        margin-left: 20px;
+    }
+
+    .title span{
+        font-size: 48px;
+        margin-left: 20px;
+    }
+
+    .input-field {
+        width: 100%;
+        /* Make the input field full width on smaller screens */
+        max-width: 600px;
+        /* Add a max-width to avoid it becoming too large */
+        margin-left: 20px;
+    }
+
+    .button {
+        width: 100%;
+        /* Make the button full width on smaller screens */
+        max-width: 200px;
+        /* Add a max-width to avoid it becoming too large */
+        margin-left: 20px;
+    }
+
+    progress {
+        width: 100%;
+        /* Make the progress bar full width on smaller screens */
+        max-width: 600px;
+        /* Add a max-width to avoid it becoming too large */
+    }
+
+    .explanation {
+        width: 100%;
+        /* Make the explanation container full width on smaller screens */
+        max-width: 100%;
+        /* Remove the fixed width */
+        height: auto;
+        /* Allow the height to adjust based on content */
+    }
+
+    #home-button{
+        bottom: 5%;
+    }
+}

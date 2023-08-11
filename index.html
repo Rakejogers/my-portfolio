@@ -12,9 +12,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="https://kit.fontawesome.com/ad963ec9c3.js" crossorigin="anonymous"></script>
     <!-- add favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/image-portrait-solid.png"
-
+    <link rel="shortcut icon" type="image/x-icon" href="images/image-portrait-solid.png">
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -32,7 +32,7 @@
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <label class="switch">
-                <input type="checkbox" class="colorCheckbox">
+                <input type="checkbox" class="colorCheckbox" id="switch">
                 <span class="slider round"></span>
             </label>
             <div class="menu-btn">
@@ -42,14 +42,14 @@
     </nav>
 
     <!-- home section start -->
-    <section class="home" id="home">
+    <section class="home darkbackground" id="home">
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Jake Rogers</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a id="learnMe" href="#about">Learn me</a>
-                <a href="#contact">Hire me</a>
+                <a id="learnMe" class="link" href="#about">Learn me</a>
+                <a href="#contact" class="link">Hire me</a>
             </div>
         </div>
     </section>
@@ -74,27 +74,28 @@
     <!-- services section start -->
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">My services</h2>
+            <h2 class="title">My projects</h2>
             <div class="serv-content">
-                <div class="card">
+                <div class="card" onclick="window.open('yt-explained/index.html','mywindow');">
                     <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Design</div>
-                        <p>I am a skilled web developer with experience in all aspects of the web development process, from front-end design to back-end programming.</p>
+                        <!-- <i class="fas fa-paint-brush"></i> -->
+                        <i class="fa-brands fa-youtube"></i>
+                        <div class="text">YT Explained</div>
+                        <p>A full-stack web app that explains youtube videos to the user with the help of GPT-3</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-drafting-compass"></i>
-                        <div class="text">CAD Drawing</div>
-                        <p> I create accurate and detailed 2D and 3D drawings using CAD software, such as Fusion360 and Mastercam.</p>
+                        <i class="fa-solid fa-book"></i>
+                        <div class="text">Assignment Tracker</div>
+                        <p>In Progress...</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Apps Design</div>
-                        <p>I create user-friendly and visually appealing mobile and web apps.</p>
+                        <i class="fas fa-square-xmark"></i>
+                        <div class="text">Null</div>
+                        <p>Coming Soon...</p>
                     </div>
                 </div>
                </div>
@@ -109,8 +110,8 @@
             <div class="skills-content">
                 <div class="column left">
                     <div class="text">My creative skills & experiences.</div>
-                    <p>I am a skilled developer with experience in web development, CAD drawing, and app design. I am proficient in a variety of programming languages and software, and I am able to create beautiful, user-friendly, and efficient products.</p>
-                    <a href="#contact">Get to know me</a>
+                    <p>I am a skilled developer with experience in full-stack web development, CAD drawing, and app design. I am proficient in a variety of programming languages and software, and I am able to create beautiful, user-friendly, and efficient products.</p>
+                    <a href="#contact" class="link">Get to know me</a>
                 </div>
                 <div class="column right">
                     <div class="bars">
@@ -224,7 +225,7 @@
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <p class="sub-title"><a>jarog2005@gmail.com</a></p>
+                                <div class="sub-title">jarog2005@gmail.com</div>
                             </div>
                         </div>
                     </div>

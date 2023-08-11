@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>YT Explained</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/ad963ec9c3.js"
+            crossorigin="anonymous"></script>
+        <script src="app.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon"
+            href="/jakerogers.engineer/images/youtube.svg">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="title"><span>YT</span> Explained</h1>
+            <!-- add a progress bar -->
+            <progress class="progress" id="progress_bar" value="25" max="100"></progress>
+            <input type="text" class="input-field" id="link_input"
+                placeholder="Enter a YouTube link">
+            <button class="button" id="explain-button">Explain<i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <!-- make a place for the explanation to be outputted -->
+        <div class="explanation-container">
+            <div class="explanation" id="explain">
+                <h2 class="explanation-title" style="text-align: center;">Explanation</h2>
+                <p class="explanation-text" id="explain-text"></p>
+            </div>
+            <!-- create a go hopme button -->
+            <button class="button" id="home-button">Home<i
+                    class="fa-solid fa-house"></i></button>
+        </body>
+    </html>

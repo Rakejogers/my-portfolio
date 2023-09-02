@@ -11,11 +11,11 @@
     --light-yell: #F9FBE7;
     --mid-yell: #F0EDD4;
     --dark-yell: #ECCDB4; */
-    --choice: dark;
-    --accent: #EC625F;
-    --dark: #0F0F0F;
-    --mid: #414141;
-    --light: #7B7B7B;
+    --choice: light;
+    --accent: #272829;
+    --dark: #FFF6E0;
+    --mid: #D8D9DA;
+    --light: #61677A;
 }
 
 *{
@@ -273,9 +273,13 @@ section .title::after{
 }
 .lightbackground{
     background-color: var(--dark);
+    transition: all .3s ease;
 }
+
 .darkbackground{
     background-image: url(images/background-wallpaper.jpg);
+    transition: all .3s ease;
+    transition-property: background-image;
 }
 .home .max-width{
   width: 100%;
@@ -316,6 +320,23 @@ section .title::after{
     color: var(--accent);
     background: none;
 }
+
+.home .home-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Move the picture to the right */
+    align-items: center;
+}
+.home .home-image #home-image-icon {
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.3s ease; /* Add transition when the src of the image changes */
+}
+
+.hidden {
+    opacity: 0;
+}
+
 
 /* about section styling */
 #about {
@@ -376,7 +397,7 @@ section .title::after{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    bacgkround: red;
+    background-color: red;
 }
 
 .img {
@@ -683,7 +704,7 @@ section .title::after{
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 2px solid var(--light);
+    border: 2px solid var(--mid);
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
@@ -693,7 +714,7 @@ section .title::after{
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
-    border-color: var(--mid);
+    border-color: var(--light);
 }
 .contact .right form .textarea textarea{
   padding-top: 10px;
@@ -701,6 +722,10 @@ section .title::after{
 }
 #submitButton{
     color: var(--dark);
+}
+#submitButton:hover{
+    color: var(--accent);
+    transition: all 0.3s ease;
 }
 .contact .right form .button-area{
   display: flex;
@@ -726,7 +751,37 @@ section .title::after{
   background: none;
 }
 /* footer section styling */
-footer{
+/* footer section styling */
+
+.footer {
+    background: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer .social-icons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer .social-icons .social-icon {
+    margin-right: 10px;
+}
+
+.footer .social-icons .social-icon i {
+    font-size: 35px;
+    color: var(--dark);
+    transition: all .3s ease;
+}
+
+.footer .social-icons .social-icon:hover i {
+    color: var(--accent);
+    transition: all .3s ease;
+}
+
+
+/* footer{
     background: var(--dark);
     padding: 15px 23px;
     color: var(--light);
@@ -738,7 +793,7 @@ footer span a{
 }
 footer span a:hover{
     text-decoration: underline;
-}
+} */
 
 
 /* responsive media query start */

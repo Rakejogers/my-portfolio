@@ -74,18 +74,62 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Student", "Developer", "Designer", "Engineer"],
+        strings: ["Student", "Developer", "Engineer", "Designer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+        preStringTyped: function (pos, self) {
+            // pos is the position of the string in the array
+            // self is the instance of Typed
+            // Update your picture here based on the pos value
+            updatePicture(pos);
+        }
+    });
+
+    var typed = new Typed(".typing-2", {
+        strings: ["Student", "Developer", "Engineer", "Designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Student", "Developer", "Designer", "Engineer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    //change picture based on typed string value
+    function updatePicture(pos) {
+        // Your logic to update the picture based on the pos value
+        var imgElement = document.getElementById('home-image-icon');
+        var timeout = 300
+        imgElement.className += 'hidden';
+        switch(pos) {
+            case 0:
+                setTimeout(function () {
+                    imgElement.src = 'images/graduated.png'; // Change image source
+                    imgElement.className = ''; // Remove class to fade in image
+                }, timeout); // Set timeout to match transition duration
+                break;
+            case 1:
+                setTimeout(function () {
+                    imgElement.src = 'images/coding.png'; // Change image source
+                    imgElement.className = ''; // Remove class to fade in image
+                }, timeout); // Set timeout to match transition duration
+                break;
+            case 2:
+                setTimeout(function () {
+                    imgElement.src = 'images/worker.png'; // Change image source
+                    imgElement.className = ''; // Remove class to fade in image
+                }, timeout); // Set timeout to match transition duration
+                break;
+            case 3:
+                setTimeout(function () {
+                    imgElement.src = 'images/idea.png'; // Change image source
+                    imgElement.className = ''; // Remove class to fade in image
+                }, timeout); // Set timeout to match transition duration
+                break;
+            default:
+                imgElement.src = "";
+        }
+        
+        
+    }
 
     // owl carousel script
     $('.carousel').owlCarousel({

@@ -414,7 +414,7 @@ section .title::after{
 .img img {
     height: 170%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 175px;
 
     -webkit-transition: all 0.5s ease;
     /* Safari - Chrome */
@@ -428,15 +428,15 @@ section .title::after{
 }
 
 .img:hover img {
-    -webkit-transform: scale(.9);
+    -webkit-transform: scale(1.1);
     /* Safari - Chrome */
-    -moz-transform: scale(.9);
+    -moz-transform: scale(1.1);
     /* Firefox */
-    -ms-transform: scale(.9);
+    -ms-transform: scale(1.1);
     /* IE 9 */
-    -o-transform: scale(.9);
+    -o-transform: scale(1.1);
     /* Opera */
-    transform: scale(.9);
+    transform: scale(1.1);
 }
 
 /* services section styling */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" href="icons/titleicon.png" type="image/x-icon">
+</head>
+<body>
+<div class="title">
+    <h1>Weather App</h1>
+</div>
+
+<div class="inputZip">
+    <form id="zip">
+    <p>Please enter your zipcode</p>
+    <input type="value" name="zipcode" minlength="5" maxlength="5" required placeholder="Zipcode">
+    <button type="submit">Submit</button>
+    <button type="button" id="locBtn" style="padding: .05%;"><img src="icons/location.png" width="40" height="40"></button>
+</form>
+</div>
+
+<div class="flex_container">   
+    <div class="weatherTypediv weatherDIVS hidden">
+        <p id="weathertext"></p>
+    </div>
+
+    <div class="precipTypediv weatherDIVS hidden">
+        <p id="precip"></p>
+    </div>
+
+    <div class="tempDiv weatherDIVS hidden">
+        <p id="temp"></p>
+    </div>
+</div>
+
+<div class="locationDate">
+    <p id="location"></p>
+    <p id="time"></p>
+</div>
+<div class="link hidden">
+    <a id="weatherlink" href="http://www.accuweather.com/" target="_blank">See more details</a>
+</div>
+
+
+
+
+<script src="weatherapi.js"></script> 
+
+</body>
+</html>

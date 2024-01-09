@@ -491,11 +491,6 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-.fa-solid fa-link{
-    height: 25px;
-    width: 25px;
-}
-
 /* skills section styling */
 #skills{
     background: var(--light);

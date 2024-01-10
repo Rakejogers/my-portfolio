@@ -16,7 +16,7 @@ const cloud_cover_label = document.getElementById("cloud-cover");
 const humidity_label = document.getElementById("humidity");
 const icon = document.getElementById("big-icon");
 
-const weatherkey = "IdJeASBDRnCuUhGipjhAKEkK2bvDR8eu";
+const weatherkey = 'IdJeASBDRnCuUhGipjhAKEkK2bvDR8eu';
 
 
 // when the webpage loads fetch the user location and getLoc

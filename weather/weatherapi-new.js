@@ -100,7 +100,7 @@ function fetchWeather(Key, place){
 }
 
 function fetchLocation(city){
-    fetch('http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=kGm2xsyj6i8GhjGg0aRRqWAQbbW5TDZV&q=' + city)
+    fetch('https://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=kGm2xsyj6i8GhjGg0aRRqWAQbbW5TDZV&q=' + city)
         .then(async data => {
         //handle data
         const parse = await data.json();

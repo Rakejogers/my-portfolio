@@ -16,6 +16,8 @@ const cloud_cover_label = document.getElementById("cloud-cover");
 const humidity_label = document.getElementById("humidity");
 const icon = document.getElementById("big-icon");
 
+const weatherkey = "IdJeASBDRnCuUhGipjhAKEkK2bvDR8eu";
+
 
 // when the webpage loads fetch the user location and getLoc
 window.onload = function() {
@@ -42,7 +44,7 @@ function getLoc(){
     }
 
     function showPosition(position) {
-        fetch('https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=kGm2xsyj6i8GhjGg0aRRqWAQbbW5TDZV&q=' + position.coords.latitude + "%2C" + position.coords.longitude)
+        fetch('https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=' + weatherkey + '&q=' + position.coords.latitude + "%2C" + position.coords.longitude)
             .then(async data => {
             //handle data
             const parse = await data.json();
@@ -55,7 +57,7 @@ function getLoc(){
 }
 
 function fetchWeather(Key, place){
-    fetch('https://dataservice.accuweather.com/currentconditions/v1/' + Key + '?apikey=kGm2xsyj6i8GhjGg0aRRqWAQbbW5TDZV&details=true')
+    fetch('https://dataservice.accuweather.com/currentconditions/v1/' + Key + '?apikey=' + weatherkey + '&details=true')
         .then(async data => {
         //handle data
         const parse = await data.json();
@@ -100,7 +102,7 @@ function fetchWeather(Key, place){
 }
 
 function fetchLocation(city){
-    fetch('https://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=kGm2xsyj6i8GhjGg0aRRqWAQbbW5TDZV&q=' + city)
+    fetch('https://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=' + weatherkey + '&q=' + city)
         .then(async data => {
         //handle data
         const parse = await data.json();

@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 flex flex-col items-center justify-center h-screen text-gray-300">
+    <div class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden" style="width: 90%; max-width: 800px;">
+        <div class="bg-blue-800 p-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <div class="text-sm">Current</div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span id="current-city">San Francisco</span>
+                    </div>
+                </div>
+                <div class="text-4xl" id="temp">73°F</div>
+            </div>
+            <div class="mt-10 text-center">
+                <div class="text-7xl font-semibold" id="title">Clear Sky</div>
+                <div class="text-7xl mt-3">
+                    <i class="fas fa-sun text-yellow-400" id="big-icon"></i>
+                </div>
+            </div>
+            <div class="flex justify-between text-sm mt-8">
+                <div>
+                    <div id="high">High: 89°F</div>
+                    <div id="low">Low: 61°F</div>
+                </div>
+                <div>
+                    <div id="wind">Wind: 14 mph E</div>
+                    <div id="cloud-cover">Cloud Cover: 5%</div>
+                </div>
+                <div>
+                    <div id="humidity">Humidity: 54%</div>
+                    <div id="time" class="text-blue-400"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4 p-8">
+            <div class="text-center">
+                <div class="text-sm mb-2" id="forcast-1">4pm</div>
+                <div class="text-blue-400">
+                    <i class="fas fa-cloud-sun" id="forcast-1-icon"></i>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="text-sm mb-2" id="forcast-2">7pm</div>
+                <div class="text-blue-400">
+                    <i class="fas fa-cloud-moon" id="forcast-2-icon"></i>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="text-sm mb-2" id="forcast-3">10pm</div>
+                <div class="text-blue-400">
+                    <i class="fas fa-cloud" id="forcast-3-icon"></i>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="text-sm mb-2" id="forcast-4">1am</div>
+                <div class="text-blue-400">
+                    <i class="fas fa-cloud-moon" id="forcast-4-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4 w-full px-4 max-w-lg">
+        <form action=""></form>
+            <input id="city-input" type="text" placeholder="Enter a city..." class="w-full p-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-gray-800 border border-gray-700"/>
+            <input type="submit" style="display: none" />
+        </form>
+    </div>
+
+<script src="weatherapi-new.js"></script> 
+
+</body>
+</html>

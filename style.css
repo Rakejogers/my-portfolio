@@ -439,7 +439,7 @@ section .title::after{
     transform: scale(1.1);
 }
 
-/* services section styling */
+/* projects section styling */
 .services, .teams{
     color:var(--light);
     background: var(--dark);
@@ -466,6 +466,7 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
     border: 5px solid;
+    margin: 10px;
 }
 .services .serv-content .card:hover{
     background: var(--accent);
